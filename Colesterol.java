@@ -25,21 +25,21 @@ class Colesterol extends Exame {
     public String classificarResultado() {
         StringBuilder resultado = new StringBuilder();
         if (getIdade() <= 19 && hdl > 45) {
-            resultado.append("HDL - BOM\n");
+            resultado.append("HDL - Bom\n");
         } else if (getIdade() > 19 && hdl > 40) {
-            resultado.append("HDL - BOM\n");
+            resultado.append("HDL - Bom\n");
         } else {
-            resultado.append("HDL - RUIM\n");
+            resultado.append("HDL - Ruim\n");
         }
 
         if (risco == 'B' && ldl < 100) {
-            resultado.append("LDL - BOM");
+            resultado.append("LDL - Bom");
         } else if (risco == 'M' && ldl < 70) {
-            resultado.append("LDL - BOM");
+            resultado.append("LDL - Bom");
         } else if (risco == 'A' && ldl < 50) {
-            resultado.append("LDL - BOM");
+            resultado.append("LDL - Bom");
         } else {
-            resultado.append("LDL - RUIM");
+            resultado.append("LDL - Ruim");
         }
         
         return resultado.toString();
